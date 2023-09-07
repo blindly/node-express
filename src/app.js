@@ -4,6 +4,7 @@ import morgan from "morgan";
 
 import * as middleware from "./utils/middleware.js";
 import helloRoute from "./routes/helloRouter.js";
+import testRoute from "./routes/testRouter.js";
 
 const app = express();
 
@@ -22,8 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/hello", helloRoute);
-
-app.use("/hello", helloRoute);
+app.use("/test", testRoute);
 
 // custom middleware
 app.use(middleware.unknownEndpoint);
