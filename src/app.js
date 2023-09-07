@@ -23,6 +23,8 @@ app.get("/", (req, res) => {
 
 app.use("/hello", helloRoute);
 
+app.use("/hello", helloRoute);
+
 // custom middleware
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
